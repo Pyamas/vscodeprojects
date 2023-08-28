@@ -29,9 +29,31 @@ class Projekt:
         print("lista utworzonych plikow to: ")
         for file in file_list:
             print(file)
+    def menu(self):
+        while True: 
+            print("co chcesz dalej zrobic?")
+            print("1. Tworzenie pliku")
+            print("2. Otwieranie pliku")
+            print("3. wyswietlanie listy plikow")
+            print("4. zakoncz") 
 
+            menu_choice = input("wybierz opcje: ")
+
+            if menu_choice == "1":
+                self.tworzenie()
+            elif menu_choice =="2":
+                self.otwieranie()
+            elif menu_choice =="3":
+                self.wyswietlanie()
+            elif menu_choice =="4":
+                print("elo")
+                break
+            else:
+                print("niepoprawny wybor. Wybierz odpowiednia opcje.")
 
 moj_projekt = Projekt()
 moj_projekt.tworzenie()
 moj_projekt.wyswietlanie()
 moj_projekt.otwieranie()
+moj_projekt.menu()
+
