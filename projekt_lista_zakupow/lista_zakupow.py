@@ -47,10 +47,9 @@ class Lista_zakupow:
         print("wybierz plik do edycji:")
         file_name = input("podaj nazwe pliku do otwarcia")
         try:
-            with open(file_name, "r+", encoding='utf-8') as my_file:
-                content = my_file.read()
-                print("zawartosc pliku")
-                print(content)
+            with open(file_name, "w", encoding='utf-8') as my_file:
+                tresc = input("podaj produkty, ktore chcesz nadpisac2: ")
+                print(f"plik{file_name} zostal edytowany.")
         except FileNotFoundError:
             print("podaj poprawna nazwe pliku")
         except Exception as e:
