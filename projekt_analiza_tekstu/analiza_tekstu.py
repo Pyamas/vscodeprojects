@@ -3,6 +3,7 @@ import string
 from collections import Counter
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import spacy
 class TextAnalysis:
     def __init__(self):
         pass
@@ -71,8 +72,12 @@ class TextAnalysis:
         
     def information_extraction(self):
         print("funkcja wydobywania informacji: ")
-
+        nlp = spacy.load("pl_core_news_md")
+        text = input("podaj tekst do analizy")
+        doc = nlp(text)
         
+        for token in doc:
+            print(token.text, token.lemma_, token.pos_, token.tag_)
         
     def showing_files(self):
         script_folder = os.path.dirname(os.path.abspath(__file__))
