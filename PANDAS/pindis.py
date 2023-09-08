@@ -7,5 +7,7 @@ def loadf():
     df.head()
 
 
-
+def Kor():
+    df = pd.read_csv("abc.csv")
+    
 loadf()
