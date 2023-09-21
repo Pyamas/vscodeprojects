@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Przewidywanie pogody</title>
+</head>
+<body>
+    <h1>Przewidywanie pogody</h1>
+    <form method ="POST" action ="/">
+        <label for="city"> Podaj miasto:</label>
+        <input type="text" id="city" name="city" required>
+        <input type="submit" value="Sprawdz Pogode">
+    </form>
+    {% if weather_data %}
+    <h2>Wyniki:</h2>
+    <p>Miast: {{ weather_data['name']}}</p>
+    <p>Temperatura: {{ weather_data['main']['temp']}} C</p>
+    <p>Warunki Pogodowe: {{weather_data['weather'][0]['description']}}</p>
+    {% endif %}
+
+</body>
+</html>

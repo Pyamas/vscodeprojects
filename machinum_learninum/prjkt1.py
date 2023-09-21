@@ -128,4 +128,4 @@ for epoch in range(num_epochs):
             total += labels.size(0)
             correct += (predicted ==labels).sum().item()
 accuracy = 100 * correct / total
-print(f"Accuracy on the test set: {accuracy:.2f}%")
+print(f"Accuracy on the test set: {accuracy:.2f}%") 
