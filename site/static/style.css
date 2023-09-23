@@ -1,0 +1,19 @@
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.tile a {
+    text-decoration: none;
+    color: white;
+
+}
+.tile img {
+    max-width: 80px;
+    max-height: 80px;
+}
