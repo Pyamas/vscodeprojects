@@ -12,11 +12,19 @@ def weather():
     if request.method =="POST":
         city = request.form["city"]
         weather_data = get_weather(city)
-
-    return render_template("weath.html", weather_data=weather_data)
+        temperature_celsius = None
+        if weather_data:
+            temperature_kelvin = weather_data['main']['temp']
+            temperature_celsius = temperature_kelvin - 273.15
+            temperature_fahrenheit = (temperature_kelvin - 273.15) *9/5 + 32
+            print(f"temperatura: {temperature_celsius}°C")
+            print(f"temperatura: {temperature_fahrenheit}°F")
+        else:
+            print("nie mozna pobrac danych pogodowych")
+    return render_template("weath.html", weather_data=weather_data, temperature_celsius=temperature_celsius, temperature_fahrenheit=temperature_fahrenheit)
 
 def get_weather(city):
-    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
+    url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}'
     response = requests.get(url)
     try:
         response = requests.get(url)

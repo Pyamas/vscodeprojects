@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>Przewidywanie pogody</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
     <h1>Przewidywanie pogody</h1>
-    <form method ="POST" action ="/">
+    <form method="POST" action="/">
         <label for="city"> Podaj miasto:</label>
         <input type="text" id="city" name="city" required>
         <input type="submit" value="Sprawdz Pogode">
@@ -13,9 +14,13 @@
     {% if weather_data %}
     <h2>Wyniki:</h2>
     <p>Miast: {{ weather_data['name']}}</p>
-    <p>Temperatura: {{ weather_data['main']['temp']}} C</p>
-    <p>Warunki Pogodowe: {{weather_data['weather'][0]['description']}}</p>
+    <p>Temperatura: {{ '%.2f'|format(temperature_celsius) }}°C</p>
+    <p>Temperatura w stopniach Fahrenheita: {{ '%.2f'|format(temperature_fahrenheit) }}°F</p>
+    <p style="text-align: left;">Warunki Pogodowe: {{ weather_data['weather'][0]['description']}} 
+    {% if weather_data['weather'][0]['icon'] %}
+        <img src="{{url_for('static', filename='weather-icons/' + weather_data['weather'][0]['icon'] + '.png')}}" alt="Weather-Icon">
     {% endif %}
-
+</p>
+    {% endif %}
 </body>
 </html>
