@@ -1,5 +1,5 @@
 body {
-    background-color: brown;
+    background-color: rgb(117, 116, 116);
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -27,18 +27,29 @@ body {
     margin-bottom: 10px;
 
 }
+.menu a.instagram::before{
+    content: "\f16d";
+}
+.menu a.github::before{
+    content: "\f09b";
+}
+.menu a.twitter::before{
+    content: "\f099";
+}
 
-.menu a {
-    text-decoration: none;
+.menu a::before {
+    content: "\f16d";
+    font-family: "Font Awesome 5 Brands";
+    font-size: 48px;
     color: black;
-    display: block;
-    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
 
 }
 
-.menu a:hover {
-    transform: translate(10px);
-
+.menu a:hover::before {
+    transform: translate(-10px) scale(1);
+    font-size: 56px;
 }
 
 .content {
@@ -56,7 +67,7 @@ h1 {
     display: inline-block;
     padding: 10px 20px;
     background-color: white;
-    color: brown;
+    color: grey;
     text-decoration: none;
     border-radius: 50px;
     transition: transform 0.3s ease-in-out;
@@ -70,7 +81,8 @@ h1 {
 }
 
 
-@keyframes moveBackground {
+@keyframes moveBackground 
+{
     0% {
         background-position: 0 0;
 
@@ -83,7 +95,47 @@ h1 {
 }
 
 body {
-    background-image: linear-gradient(to right, white 50%, brown 50%);
+    background-image: linear-gradient(to right, white 50%, #277c4141  50%);
     background-size: 200% 100%;
-    animation: moveBackground 2s linear infinite;
+    animation: moveBackground 3s linear forwards;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    animation: spin 4s linear infinite, move 4s linear infinite alternate;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25%, 75%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
 }
