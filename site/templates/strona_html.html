@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OWHSLP</title>
-    <link rel="stylesheet" type="text/css" href="/site/static/style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale:1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Moja Strona</title>
+    
 </head>
 <body>
-<div class="tile">
-    <a href="https://twitter.com/quchfu"><img src ="X.png" alt="Twitter"></a>
-</div>
-<div class="tile">
-    <a href="github.com/OWHSLP"><img src="github.jpg" alt="github"></a>
-</div>
-<div class="tile">
-    <a href="instagram.com/OWHSLP"><img src="instagram.png" alt="instagefeeram"></a>
-</div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>HI! here is my site.</h1>
+        <a href="#" class="btn">My description</a>
+    </div>
+    <div class="background-container"></div>
+<script>
+    document.querySelector(".btn").addEventListener("click", function() {
+        alert("to jest opis");
+    
+    });
+</script>
 </body>
-
-
-
 </html>
