@@ -1,0 +1,23 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+
+}
+
+#descriptionContainer {
+    text-align: center;
+
+}
+
+#descriptionText {
+    font-size: 24px;
+
+}
+
+#backbutton {
+    font-size: 18px;
+}
