@@ -7,11 +7,11 @@ body {
 }
 
 .menu {
-    background-color: white;
+    background-color: rgb(216, 203, 203);
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 60px;
     height: 100%;
     padding: 20px;
 
@@ -58,18 +58,18 @@ body {
     padding-top: 100px;
 
 }
-
+    
 h1 {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: white;
-    color: grey;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 25px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -95,8 +95,9 @@ h1 {
 }
 
 body {
-    background-image: linear-gradient(to right, white 50%, #277c4141  50%);
-    background-size: 200% 100%;
+    background-image: linear-gradient(to right ,white 50%,#277c4141  50%);
+    background-size: calc(200% - 1cm) 100%;
+    background-position: calc(200% - 1cm) 0; 
     animation: moveBackground 3s linear forwards;
 }
 
