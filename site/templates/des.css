@@ -1,23 +1,41 @@
-.body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
+body {
+    background-color: #000000;
+    font-family: Consolas;
+    text-align: center;
+    padding: 20px;
+}
 
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(252, 252, 252);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+
+}
+button:hover {
+    transform: scale(1.1);
 }
 
 #descriptionContainer {
-    text-align: center;
-
-}
-
-#descriptionText {
     font-size: 24px;
+    margin-top: 20px;
+    color: white;
+}
+.fadeIn {
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out forwards;
 
 }
 
-#backbutton {
-    font-size: 18px;
-}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}   

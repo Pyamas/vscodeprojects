@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title> Moja Strona</title>
+    <title> Owhslp</title>
     
 </head>
 <body>
@@ -17,47 +17,15 @@
         </ul>
     </div>
     <div class="content">
-        <h1>HI! here is my site.</h1>
+        <h1>Hi there.</h1>
         <a href="description.html" class="btn">My description</a>
     </div>
     <div class="background-container">
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
-<script>
-    const circle1 = document.querySelector(".circle:nth-child(1)");
-    const circle2 = document.querySelector(".circle:nth-child(2)");
-
-    let angle1 = 0;
-    let angle2 = 180;
-
-    function updatePositions() {
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight /2;
-        const radius = 100;
-
-        const x1 = centerX + radius * Math.cos(angle1 * (Math.PI / 180))
-        const y1 = centerY + radius * Math.sin(angle1 * (Math.PI / 180));
-
-
-        const x2 = centerX + radius * Math.cos(angle2 * (Math.PI / 180))
-        const y2 = centerY + radius * Math.sin(angle2 * (Math.PI / 180));
-
-        circle1.style.left = x1 + "px";
-        circle1.style.top = y1 + "px";
-a
-        circle2.style.left = x2 + "px";
-        circle2.style.top = y2 + "px";
-
-        angle1 += 2;
-        angle2 += 2;
-
-        requestAnimationFrame(updatePositions);
-    }   
-
-    updatePositions();
-    
-    ;
-</script>
+    <p>We are disturbed by our own unconsciousness; we want to unmask it, as if it were the perpetrator of our troubles.</p>
+    <p> The only person with whom you have to compare yourself is you in the past. The goal is to be better than that person, not to be better than other people.</p>
+    <p> ~ Zygmunt Freud </p>
 </body>
 </html>

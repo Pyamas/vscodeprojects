@@ -2,7 +2,7 @@ body {
     background-color: rgb(117, 116, 116);
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Consolas;
 
 }
 
@@ -60,9 +60,15 @@ body {
 }
     
 h1 {
+    font: Consolas;
     color: rgb(255, 255, 255);
 }
 
+p {
+    text-align: center;
+    font-family: Consolas;
+    color: rgb(255,255,255);
+}
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -95,10 +101,11 @@ h1 {
 }
 
 body {
-    background-image: linear-gradient(to right ,white 50%,#277c4141  50%);
+    font-family: Consolas;
+    background-image: linear-gradient(to right ,white 50%,#000000f6  50%);
     background-size: calc(200% - 1cm) 100%;
     background-position: calc(200% - 1cm) 0; 
-    animation: moveBackground 3s linear forwards;
+    animation: moveBackground 2s linear forwards;
 }
 
 .background-container {
@@ -111,32 +118,3 @@ body {
     z-index: -1;
 }
 
-.circle {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    animation: spin 4s linear infinite, move 4s linear infinite alternate;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes move {
-    0%, 100% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    25%, 75%{
-        transform: translate(-50%, -50%) rotate(180deg);
-    }
-}
